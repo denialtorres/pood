@@ -77,3 +77,19 @@ mountain_bike =
   )
 
 puts mountain_bike.spares
+
+
+# -- add a new type of bike
+recumbent_config = [
+  ['chain', '9-speed'],
+  ['tire_size', '28'],
+  ['flag', 'tall and orange']
+]
+
+recumbent_bike =
+  Bicycle.new(
+    size: 'L',
+    parts: PartsFactory.build(config: recumbent_config)
+  )
+
+puts recumbent_bike.spares
